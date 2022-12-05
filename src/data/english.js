@@ -1,7 +1,7 @@
 export const englishLanguage=[
     {name:"Menu",
     sectionOne:"New Game",
-    sectionTwo:"Continue",
+    sectionTwo:"Accompany the story of 2.Mahmut and try to reach the 10th question by choosing the options. Be careful, for each level you get below 50 points, the lucky dice will be thrown and you can be dethroned.",
     sectionThree:"How To Play",
     stats:["Administrive","People Support","Military Support","Peace Chance"]
     },

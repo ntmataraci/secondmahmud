@@ -2,7 +2,7 @@ export const turkishLanguage = [
   {
     name: "Menü",
     sectionOne: "Yeni Oyun",
-    sectionTwo: "Devam Et",
+    sectionTwo: "2.Mahmut'un hikayesine eşlik et ve seçenekleri seçerek 10. soruya kadar gelmeye çalış. Dikkat et 50 puanın altına indiğin her bölüm için şans zarı atılır ve tahttan indirelebilirsin.",
     sectionThree: "Nasıl Oynanır",
     stats: [
       "Merkezi Yönetim",
