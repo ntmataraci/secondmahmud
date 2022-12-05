@@ -9,6 +9,7 @@ const Game = () => {
   const stats = useSelector((state) => state.languageSlice.stats);
   const dataFinder = data.find((item) => item.scene === scene);
   const [badEndGame, setBadEndGame] = useState(false);
+  // const [dices,setDices]=useState([50,50,50,50])
   useEffect(() => {
     window.localStorage.setItem(
       "secondmahmudgame",
@@ -21,28 +22,38 @@ const Game = () => {
   }, []);
 
   const takeAction = (effect) => {
+    if(scene!=10){
     effect.map((item) =>
       dispatch(effectStats({ stat: item.stat, point: item.point }))
     );
     dispatch(changeScene(1));
-    if (stats.Adm < 50) {
-      badEnd("Adm", stats.Adm);
-    }
-    if (stats.Peo < 50) {
-      badEnd("Peo", stats.Peo);
-    }
-    if (stats.Mil < 50) {
-      badEnd("Mil", stats.Adm);
-    }
-    if (stats.War < 50) {
-      badEnd("War", stats.War);
     }
   };
+
+  useEffect(()=>{ 
+  rollerAction()
+  console.log(scene)
+  },[scene])
+
+const rollerAction=()=>{
+  if (stats.Adm < 50) {
+    badEnd("Adm", stats.Adm);
+  }
+  if (stats.Peo < 50) {
+    badEnd("Peo", stats.Peo);
+  }
+  if (stats.Mil < 50) {
+    badEnd("Mil", stats.Adm);
+  }
+  if (stats.War < 50) {
+    badEnd("War", stats.War);
+  }
+}
 
   const badEnd = (name, limit) => {
     const rand = Math.floor(Math.random() * 100 + 1);
     const limitPoint = (100 - limit - 50) * 2.3 + 10;
-    console.log(rand,limitPoint)
+    console.log(rand)
     if (rand > limitPoint) {
       return;
     } else {
@@ -52,14 +63,24 @@ const Game = () => {
 
 const [imgLoaded,setImgLoaded]=useState(false)
 
+const restartGame=()=>{
+  dispatch(changeScene(-scene+1))
+  dispatch(updateStats({ Adm: 55, Peo: 60, Mil: 60, War: 55 }))
+  setBadEndGame()
+}
   return (
     <div className="flex flex-col max-w-[350px] lg:max-w-[600px]">
       {badEndGame ? (
-       <div> {badEndGame.content}</div>
+        <>
+       <div className="flex justify-center items-center mt-5"> {badEndGame.content}</div>
+       <div className="mt-5 cursor-help" onClick={()=>restartGame()}>Yeniden Oyna / Restart</div>
+       </>
       ) : (
         <>
               <Stats />
-
+              {/* <div className="flex">
+ {dices.map(item=><div>{item}</div>)}
+ </div> */}
           <img src={dataFinder.img} onLoad={()=>setImgLoaded(true)} className="lg:max-w-[300px] mx-auto" style={{visibility:imgLoaded?"visible":"hidden"}}/>
           <div className="animation-pulse" style={{visibility:imgLoaded?"hidden":"visible"}}>Loading...</div>
 
@@ -72,6 +93,7 @@ const [imgLoaded,setImgLoaded]=useState(false)
               </div>
             ))}
           </div>
+       <div className="mt-5 cursor-help" onClick={()=>restartGame()}>Yeniden Oyna / Restart</div>
         </>
       )}
     </div>

@@ -123,7 +123,7 @@ export const turkishLanguage = [
   {
     scene: 5,
     img: "https://www.bilgipedia.com.tr/wp-content/uploads/2021/01/yunan-isyani.jpg",
-    header:"Yunan İstanı",
+    header:"Yunan İsyanı",
     entrance: `1821 yılında Yunan âsilerin Mora’daki sivil Türkler’i kılıçtan geçirmeleri üzerine II. Mahmud, isyanın başlıca tahrikçisi olan İstanbul’daki Ortodoks Patriğini astırdı. Romanya’da da Rusya’nın tahrikiyle bir isyan çıktı. Türk ordusu, bu isyanı kolayca bastırdı. Fakat Mora isyanı bastırılamadı. Zira bir Fransız kolordusu başta olmak üzere bütün Avrupa’dan yardım alıyordu. Yalnız Avusturya Osmanlı’yı tutuyordu. Prusya, İngiltere ve İspanya tarafsızdı. Rusya ile Fransa, Yunanistan’a bağımsızlık verilmesini şiddetle istiyorlardı. Lord Cochrane ve Sir Richard Church gibi İngiliz generallerinin komutasındaki Yunanlar, tamamen ezilmişler; isyan Mısır ordusu tarafından tamamen bastırılmıştı ki 20 Ekim 1827’de Navarin faciası oldu. Türk donanması, Mora’nın güneybatısındaki bu limanda bulunuyordu. İngiliz – Fransız – Rus müttefik donanması, savaş bayrağı çekmek usulden olduğu halde bunu yapmaksızın limana girdi, böyle bir hareket beklemeyen Osmanlı donanmasına birdenbire ateş açıp imha etti. Navarin faciasının hemen akabinde 1828'de Rusya da Yunanistan ile ilgili istekleri kabul ettirmek için Osmanlı Devletine savaş açtı. Bir sene önce donanması Navarin'de yok olan, Yeniçeriler’i de kanlı bir katliamla ortadan kaldıran, yeni modern ordusu henüz çekirdek halinde bulunan II. Mahmud, Avrupa’nın baskısına karşı koyamadı. Rus ordusunun Balkanları geçip Edirne’ye kadar gelmesi üzerine Rusya ile Edirne Antlaşması imzalandı. Ruslar, bütün Osmanlı topraklarından çekildi. Ancak Yunanistan’a bağımsızlık koparmakla yetindi, böylece Balkanlar’daki Ortodokslar arasında koruyucu rolüne sahip çıkmayı umuyordu. Mora ve Attika yarımadaları ile Eğriboz ve Kiklad adalarından ibaret küçücük 49.414 km² bir Yunan Krallığı kuruldu. `,
     choices: [
       {
@@ -199,19 +199,147 @@ export const turkishLanguage = [
     ],
   },
   {
+    scene: 8,
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/1024px-Flag_of_Saudi_Arabia.svg.png",
+    header:"Suud İsyanı",
+    entrance: `Babasının ölmesi üzerine Muhammed bin Suud, Diriye ve çevresinde ilk olarak 1726’da bağımsız bir emir sanıyla hükmetmeye başladı. Bu dönemde Muhammed'in zamanındaki hayat tarzına dönülmesini savunan ve her türlü yeniliğe ve mezarlara karşı olan Vahhabiler, ve öğretilerin yayıcısı Muhammed bin Abdülvehhâb bazı sahâbelerin kabirlerini yıktırması sonucu gördüğü tepkiler üzerine Diriye’ye sığınmak zorunda kaldı. Vahhabilere göre mezarın sadece ziyareti değil, yerinin belli olması bile cehennemin kapılarını açacak bir kabahatti. 
+    Napolyon Bonapart’ın 1798’de beklenmedik bir şekilde Mısır’ı işgal etmesi ve bunun ardından ortaya çıkan meseleler Suûdîler’in işine yaradı.[2] 1802'de Abdullah bin Suud, Kerbelâ’yı basıp matem ayini yapan Şiîler’in 2000’den fazlasını öldürerek Hüseyin’in sandukasını ateşe verip türbedeki 200 deve yükü altın ve gümüş eşyayı Diriye’ye getirdiler.[3] 1803’te Hicaz’a karşı giriştikleri işgal hareketi ile birlikte ilk önce Taif'i ardından da 1805’te yeniden Hicaz'a girip Medine’yi ele geçirdiler. Medine'de ne kadar türbe ve mezar varsa hepsi yerle bir edildi ve Mescid-i Nebevi yağmalandı. Bir yıl sonra da 1806'da Mekke'yi ele geçirdiler. Hac yolu seneler boyu kapalı kaldı ve uyarılara kulak asmadan Mekke’ye doğru yola çıkanlardan da hiçbir haber alınamadı. Özellikle bu son olaylar Osmanlı Devleti'nin prestijini sarsacak nitelikteydi, zîrâ Osmanlı Devleti bu iki kutsal şehir üzerinde 1517'den beri hükümranlığını kesintisiz sürdürmekteydi.
+    
+    `,
+    choices: [
+      {
+        name: "a",
+        content: "Kavalalı ailesinin yardımıyla suudları yok et",
+        effect: [
+          { stat: "Adm", point: -10 },
+          { stat: "Mil", point: 5 },
+        ],
+      },
+      {
+        name: "b",
+        content: "Kendi güçlerinle, suudları yok et",
+        effect: [
+          { stat: "Mil", point: -10 },
+          { stat: "Adm", point: 15 },
+        ],
+      },
+      {
+        name: "c",
+        content: "Özerklik tanı",
+        effect: [
+          { stat: "Adm", point: -25 },
+          { stat: "Peo", point:  15 },
+        ],
+      },
+    ],
+  },
+  {
+    scene: 9,
+    img: "https://img-s3.onedio.com/id-5adb51f7820103a50e903fa8/rev-0/w-620/f-jpg/s-f281ec242300121541dc7640b07b8d01cf96f7e1.jpg",
+    header:"İnkilapçılık",
+    entrance: `2. Mahmut'un yaptığı yenilikler.
+ İlk posta ve polis örgütü kuruldu.
+ Kıyafette değişiklikler ve düzenlemeler yapıldı. memurlara pantolon ve fes uygulaması, kravat,gömlek uygulaması getirildi.
+ Müsadere usulü, yani devletin vatandaşların mallarına el koyması uygulaması kaldırıldı.
+ Sağlık örgütü ve ilk karantina sistemi oluşturuldu.
+ Devlet dairelerine padişah portresi asılması uygulaması getirildi.
+ Avrupa'ya eğitim alması için ilk defa öğrenci gönderildi.
+ İlköğretim istanbul'da zorunlu hale geldi.
+ Müslüman tercümanlar yetiştirme amacı ile tercüme odaları kuruldu.
+ Askeri okullarda fransızca zorunlu ders haline getirildi.
+ Yurtiçine geziler düzenlendi.
+ İlk resmi gazetesi olan takvimi vekayi gazetesi 1831'de yayınlandı.
+ Batılı eğitim veren rüştiyeler ve mektebi ulumı edebiye gibi orta öğretim kurumları açıldı.
+ Arazi kanunnamaesi ile mülkiyet hakkı getirildi.
+ Müslüman tüccara vergi indirimi sağlamıştır.
+ 2. mahmut tarafından yerli malı kullanımı teşvik edilmiştir.
+ İthal malların tüketimi sınırlandırılmaya çalışılmış ve ihracata önem verilmiştir.
+ Yol yapımına önem verilmiştir.
+ Ordunun ihtiyacına yönelik olarak feshane, çuha fabrikası ve bezhane gibi pek çok tesis kuruldu.
+ Devletin gelirlerini arttırmak amacı ile evkaf vekâleti (vakıflar müdürlüğü) kurulmuştur.
+ Askeri ve idari ileri düzenlemek için danışma meclisleri kuruldu.
+ Divan kaldırıldı yerine nazırlıklar/bakanlıklar kuruldu.
+ Senedi ittifak imzalandı.
+ Memurlar, "iç işleri/dahiliye" ve "dış işleri/hariciye" memurları olmak üzere 2 gruba ayrıldı.
+ Askeri ve idari işleri düzenlemek adına danışma meclisleri kuruldu.
+ İlkokul zorunlu hale getirildi.
+ Rüştiye açıldı.(ortaokul)
+ İdadi açıldı.(lise )
+ Fransızca resmi yabancı dil ilan edildi.
+ Avrupa'ya ilk defa öğrenci gönderildi.
+ Tıbbiye açıldı.
+ İlk resmi gazete (takvimi vakai) çıkarıldı.
+ Harbiye açıldı.
+ Divan'ı hümayun kaldırılıp nazırlıklar kuruldu.(bakanlık)
+ Encünemi danişme kuruldu. (tercüme odaları)
+ İlk nüfus sayımı yapıldı.sadece erkekler sayıldı.
+ Meclisi ahkamı adliye kuruldu.
+ İl, ilçe,bucak ve muhtarlıklar kurulup vali, kaymakam atandı. 
+    `,
+    choices: [
+      {
+        name: "a",
+        content: "Reforma Sadık Kal",
+        effect: [
+          { stat: "Adm", point: -10 },
+          { stat: "Peo", point: -5 },
+          { stat: "Mil", point: 10 },
+          { stat: "War", point: 10 },
+        ],
+      },
+      {
+        name: "b",
+        content: "Reforma Kısmen Sadık Kal",
+        effect: [
+          { stat: "Adm", point: -5 },
+          { stat: "Peo", point: 0 },
+          { stat: "Mil", point: 5 },
+          { stat: "War", point: 5 },
+        ],
+      },
+      {
+        name: "c",
+        content: "Reformları geri çek",
+        effect: [
+          { stat: "Adm", point: -90 },
+          { stat: "Peo", point: -90 },
+          { stat: "Mil", point: -90 },
+          { stat: "War", point: -90 },
+        ],
+      }]},
+      {
+        scene: 10,
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Mausoleum_of_Sultan_Mahmud_II_-_sarcophagus_of_a_sultan_-_P1030832.JPG/267px-Mausoleum_of_Sultan_Mahmud_II_-_sarcophagus_of_a_sultan_-_P1030832.JPG",
+        header:"Ölüm",
+        entrance: `Sultan Mahmud’dan umut kesildiği sırada sözde devleti ve milleti düşünen kimi devlet adamları ve Hüsrev Paşa, koma halindeki padişahın tahttan indirilmesine fetva alıp oğlu Şehzade Abdülmecit’i bir an evvel tahta oturtmak düşüncesindeydiler.[kaynak belirtilmeli] Buna karşılık Sultan Mahmud’a çok bağlı bir grup saray erkanı ise hekimlerin padişahı kasten tedavi etmedikleri, şayet oğlu Şehzade Abdülmecit ortadan kaldırılırsa mecbur kalıp iyileştirecekleri inancıyla daha korkunç, tehlikeli ve duygusal çareler peşindeydiler. Bunların başında da Hüsrev Paşa’nın siyasi rakibi Kaptan-ı Derya Müşir Ahmet Fevzi Paşa vardı. Hüsrev Paşa, olasılıkla kendi uydurması olan bu suikast ihtimalinden genç şehzadeyi ve annesi Bezmialem Sultan’ı gizlice bilgilendirerek onları kendisine minnettar kalmayı gözetmişti. Bu gizli hesapları komadaki padişah sezmiş ya da ona acımayarak kulağına fısıldayanlar olmuş olmalı ki ölümün beklendiği o günlerde Sultan Mahmud oğlu Şehzade Abdülmecit’e ve annesi Bezmialem Sultan’a küskündü.[kaynak belirtilmeli] Ölüm döşeğindeyken Şehzade Abdülmecit babasını son kez görmek isteğiyle gizlice odasına girmiş ayaklarına yüzünü sürüp ağlarken,[kaynak belirtilmeli] durumu fark eden Sultan Mahmud son takatini sarf edip oğlunun yüzünü tekmelemişti.[kaynak belirtilmeli] Sultan Mahmud 2 Temmuz 1839 Pazartesi günü sabaha karşı hayatını kaybetti. , 
+        `,
+        choices: [
+          {
+            name: "a",
+            content: "Tebrikler oyunu kazandın",
+            effect: [
+              { stat: "Adm", point: 100 },
+              { stat: "Peo", point: 100 },
+              { stat: "Mil", point: 100 },
+              { stat: "War", point: 100 },
+            ],
+          },
+        ]
+      },
+  {
     badGame:"Adm",
-    content:"Adm kaybettin"
+    content:"Yönetimi merkezileştirmek ve yeniden padişah yetkilerini ele almak isterken, derebeyleri ve tarikatları açıkça karşına aldın. Sadrazamlarınla anlaşan bu gruplar seni tahttan indirdi ve zindana kapattı. Maalesef aklındakileri uygulayamadan yönetimi kaybettin."
   },
   {
     badGame:"Peo",
-    content:"Peo kaybettin"
+    content:"Arka arkaya yapılan reformlar ve yenilikler halk tarafından hoşnut karşılanmadı. Halka bu reformlara ayak uydurması için yeterli süre tanımadın. Halk desteğini alan diğer gruplar seni tahttan indirdi."
   },
   {
     badGame:"Mil",
-    content:"Mil kaybettin"
+    content:"Askeriye üzerinde yaptığın reformlar buradaki çıkar gruplarının harekete geçmesine sebep oldu. Ani bir baskınla tahttan indirildin."
   },
   {
     badGame:"War",
-    content:"war kaybettin"
+    content:"Osmanlı ordusu henüz savaşa hazır değilken, uyguladığın agresif tutum İngiltere, Rusya gibi büyük güçlerin sana saldırmasına sebep oldu. Savaş sonucu yönetimini kaybettin."
   },
 ];

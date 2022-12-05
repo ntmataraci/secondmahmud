@@ -5,7 +5,7 @@ const initialState = {
   lang: "",
   data: "",
   menuOpen: true,
-  stats: { Adm: "", Peo: "", Mil: "", War: "" },
+  stats: { Adm: 55, Peo: 60, Mil: 55, War: 55 },
   scene: 1,
 };
 
