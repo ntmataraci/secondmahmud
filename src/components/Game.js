@@ -32,6 +32,7 @@ const Game = () => {
 
   useEffect(()=>{ 
   rollerAction()
+  window.scrollTo(0,0)
   console.log(scene)
   },[scene])
 
